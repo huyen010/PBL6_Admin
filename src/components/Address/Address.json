@@ -1,0 +1,499 @@
+{
+  "communes": [
+    {
+      "_id": {
+        "$oid": "636081e2fbe3b2900ef82d3f"
+      },
+      "name": "Hòa Thuận",
+      "id_district": {
+        "$oid": "635ca932f839a0b384f4a787"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636081fcfbe3b2900ef82d42"
+      },
+      "name": "Phước Hòa",
+      "id_district": {
+        "$oid": "635ca932f839a0b384f4a787"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "63608214fbe3b2900ef82d46"
+      },
+      "name": "Hòa Khánh",
+      "id_district": {
+        "$oid": "63629fb8aba74a75d7e41421"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636b61bb0d9451ed599aa7ee"
+      },
+      "name": "Hòa Bình",
+      "id_district": {
+        "$oid": "636b61850d9451ed599aa7e7"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bbd82f8dc1b099187c501"
+      },
+      "name": "Hà Lam",
+      "id_district": {
+        "$oid": "635ca942f839a0b384f4a78a"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bbd8ef8dc1b099187c504"
+      },
+      "name": "Duy Xuyên",
+      "id_district": {
+        "$oid": "635ca942f839a0b384f4a78a"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bbd98f8dc1b099187c507"
+      },
+      "name": "Điện Bàn",
+      "id_district": {
+        "$oid": "635ca942f839a0b384f4a78a"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bbdddf8dc1b099187c50a"
+      },
+      "name": "Hòa Minh",
+      "id_district": {
+        "$oid": "63629fb8aba74a75d7e41421"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bbe8cf8dc1b099187c50d"
+      },
+      "name": "Hòa Hiệp",
+      "id_district": {
+        "$oid": "63629fb8aba74a75d7e41421"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc1fef8dc1b099187c510"
+      },
+      "name": "An Hải Bắc",
+      "id_district": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc21ff8dc1b099187c513"
+      },
+      "name": "An Hải Đông",
+      "id_district": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc228f8dc1b099187c516"
+      },
+      "name": "An Hải Tây",
+      "id_district": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc236f8dc1b099187c519"
+      },
+      "name": "Phước Mỹ",
+      "id_district": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc241f8dc1b099187c51c"
+      },
+      "name": "Thọ Quang",
+      "id_district": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc24df8dc1b099187c51f"
+      },
+      "name": "Mân Thái",
+      "id_district": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc267f8dc1b099187c522"
+      },
+      "name": "Nại Hiên Đông",
+      "id_district": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc78000802c80f39a9c4d"
+      },
+      "name": "Hòa An",
+      "id_district": {
+        "$oid": "636bbb6af8dc1b099187c4fb"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc79000802c80f39a9c50"
+      },
+      "name": "Hòa Phát",
+      "id_district": {
+        "$oid": "636bbb6af8dc1b099187c4fb"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc7a200802c80f39a9c53"
+      },
+      "name": "Hòa Thọ Đông",
+      "id_district": {
+        "$oid": "636bbb6af8dc1b099187c4fb"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc7a900802c80f39a9c56"
+      },
+      "name": "Hòa Thọ Tây",
+      "id_district": {
+        "$oid": "636bbb6af8dc1b099187c4fb"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc7d400802c80f39a9c59"
+      },
+      "name": "Khuê Trung",
+      "id_district": {
+        "$oid": "636bbb6af8dc1b099187c4fb"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc7ec00802c80f39a9c5c"
+      },
+      "name": "Hòa Xuân",
+      "id_district": {
+        "$oid": "636bbb6af8dc1b099187c4fb"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc85400802c80f39a9c62"
+      },
+      "name": "Hòa Bắc",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc85c00802c80f39a9c65"
+      },
+      "name": "Hòa Châu",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc86400802c80f39a9c68"
+      },
+      "name": "Hòa Khương",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc86c00802c80f39a9c6b"
+      },
+      "name": "Hòa Liên",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc87200802c80f39a9c6e"
+      },
+      "name": "Hòa Nhơn",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc87b00802c80f39a9c71"
+      },
+      "name": "Hòa Ninh",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc88400802c80f39a9c74"
+      },
+      "name": "Hòa Phong",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc88a00802c80f39a9c77"
+      },
+      "name": "Hòa Phú",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc89300802c80f39a9c7a"
+      },
+      "name": "Hòa Phước",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc89a00802c80f39a9c7d"
+      },
+      "name": "Hòa Sơn",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc8a100802c80f39a9c80"
+      },
+      "name": "Hòa Tiến",
+      "id_district": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc8d300802c80f39a9c86"
+      },
+      "name": "Bình Hiên",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc8da00802c80f39a9c89"
+      },
+      "name": "Bình Thuận",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc8e500802c80f39a9c8c"
+      },
+      "name": "Hải Châu",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc90a00802c80f39a9c95"
+      },
+      "name": "Hòa Cường Nam",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc91100802c80f39a9c98"
+      },
+      "name": "Hòa Cường Bắc",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc91e00802c80f39a9c9b"
+      },
+      "name": "Hòa Thuận Đông",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc92400802c80f39a9c9e"
+      },
+      "name": "Hòa Thuận Tây",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc92f00802c80f39a9ca1"
+      },
+      "name": "Nam Dương",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc93d00802c80f39a9ca4"
+      },
+      "name": "Phước Ninh",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc94f00802c80f39a9caa"
+      },
+      "name": "Thạch Thang",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc95900802c80f39a9cad"
+      },
+      "name": "Thanh Bình",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc96800802c80f39a9cb0"
+      },
+      "name": "Thuận Phước",
+      "id_district": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      }
+    }
+  ],
+  "districts": [
+    {
+      "_id": {
+        "$oid": "635ca932f839a0b384f4a787"
+      },
+      "name": "Tam Kỳ",
+      "id_province": {
+        "$oid": "635ca2ae031ecde80126161a"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "635ca942f839a0b384f4a78a"
+      },
+      "name": "Thăng Bình",
+      "id_province": {
+        "$oid": "635ca2ae031ecde80126161a"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "63629fb8aba74a75d7e41421"
+      },
+      "name": "Liên Chiểu",
+      "id_province": {
+        "$oid": "635ca2a4031ecde801261617"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636b61850d9451ed599aa7e7"
+      },
+      "name": "Nhật Lệ",
+      "id_province": {
+        "$oid": "635ca287031ecde801261611"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bbb5df8dc1b099187c4f8"
+      },
+      "name": "Sơn Trà",
+      "id_province": {
+        "$oid": "635ca2a4031ecde801261617"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bbb6af8dc1b099187c4fb"
+      },
+      "name": "Cẩm Lệ",
+      "id_province": {
+        "$oid": "635ca2a4031ecde801261617"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc83e00802c80f39a9c5f"
+      },
+      "name": "Hòa Vang",
+      "id_province": {
+        "$oid": "635ca2a4031ecde801261617"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "636bc8b800802c80f39a9c83"
+      },
+      "name": "Hải Châu",
+      "id_province": {
+        "$oid": "635ca2a4031ecde801261617"
+      }
+    }
+  ],
+  "provinces": [
+    {
+      "_id": {
+        "$oid": "635ca2a4031ecde801261617"
+      },
+      "name": "Đà Nẵng",
+      "region": "Miền Trung"
+    },
+    {
+      "_id": {
+        "$oid": "635ca2ae031ecde80126161a"
+      },
+      "name": "Quảng Nam",
+      "region": "Miền Trung"
+    }
+  ]
+}

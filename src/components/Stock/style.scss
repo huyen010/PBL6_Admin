@@ -1,0 +1,133 @@
+.form{
+    margin-top: 30px;
+    border-radius: 7px;
+    & > .supply{
+        text-align: center;
+        & > label{
+            width: fit-content;
+            font-size: 25px;
+            color: darkblue;
+        }
+    }
+    & > div{
+        margin-bottom: 30px;
+        & > label{
+            margin-right: 20px;
+            display: inline-block;
+            width: 100px;
+        };
+        & > select{
+            width: 150px;
+            border-radius: 7px;
+            border:2px solid slateblue;
+            background-color: aliceblue
+        };
+        & > .input{
+            width: 150px;
+            border-radius: 7px;
+            border:2px solid slateblue;
+            background-color: aliceblue
+        };
+        & > button{
+            display: block;
+            padding: 6px 10px 6px 10px;
+            border-radius: 4px;
+            border: 1px solid slateblue;;
+            background-color: #6a5acdab;
+            color: white;
+        };
+    };
+    & > .addmore{
+        & > button{
+            display: block;
+            margin-left: 410px;
+            padding: 4px 4px 4px 4px;
+            border-radius: 4px;
+            border: 1px solid slateblue;;
+            background-color: #6a5acdab;
+            color: white;
+        };
+        & > button:hover{
+            background-color: slateblue;;
+        }
+    }
+    & > .product_item{
+        padding: 20px 0px 20px 0px;
+        border: 2px solid slateblue;
+        border-radius: 7px;
+        margin-right: 40px;
+        & > .product{
+            display: flex;
+            margin: 0px 30px 0px 30px;
+            justify-content: space-between;
+            & > div{
+                & > label{
+                    margin-right: 20px;
+                };
+                & > select{
+                    width: 150px;
+                    border-radius: 7px;
+                    border:2px solid slateblue;
+                    background-color: aliceblue
+                }
+            }
+        };
+        & > .price{
+            margin: 15px 0px 0px 30px;
+            & > label{
+                margin-right: 40px;
+            };
+            & > input{
+                width: 150px;
+                border-radius: 7px;
+                border:2px solid slateblue;
+                background-color: aliceblue
+            }
+        }
+        & > button{
+            display: block;
+            margin: auto;
+            padding: 4px 4px 4px 4px;
+            border-radius: 4px;
+            border: 1px solid slateblue;;
+            background-color: #6a5acdab;
+            color: white;
+        };
+        button:hover{
+            background-color: slateblue;
+        };
+        & > .type_item{
+            margin: 20px 30px 20px 30px;
+            padding: 20px 0px 20px 0px;
+            border: 2px solid #6a5acdab;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-around;
+            & >div{
+                & > label{
+                    margin-right: 10px
+                };
+                & > select{
+                    width: 100px;
+                    border-radius: 7px;
+                    border:2px solid #6a5acdab;
+                    background-color: aliceblue
+                };
+                &> input{
+                    border-radius: 7px;
+                    border:2px solid #6a5acdab;
+                    background-color: aliceblue
+                };
+                &> button{
+                    display: block;
+                    margin: auto;
+                    padding: 4px 4px 4px 4px;
+                    border-radius: 4px;
+                    border: 1px solid slateblue;;
+                    background-color: #6a5acdab;
+                    color: white;
+                }
+            }
+        }
+    };
+}
