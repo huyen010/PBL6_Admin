@@ -3,19 +3,24 @@ import { Button, Modal, ModalTitle } from 'react-bootstrap'
 import axios from 'axios'
 
 const Staff = () => {
+    const header = {
+        headers: {
+            token: localStorage.getItem("token"),
+        },
+    };
     const mainColor = 'linear-gradient(180deg, #7D89FF 0%, #AB40FF 66.67%)'
     const [Data, setData] = useState([]);
     const [ViewShow, SetViewShow] = useState(false)
-    const handleViewShow = (item) => { 
-        SetViewShow(true) 
-        setStaff({...item})
+    const handleViewShow = (item) => {
+        SetViewShow(true)
+        setStaff({ ...item })
     }
     const hanldeViewClose = () => { SetViewShow(false) }
     //FOr Edit Model
     const [ViewEdit, SetEditShow] = useState(false)
-    const handleEditShow = (item) => { 
+    const handleEditShow = (item) => {
         SetEditShow(true)
-        setStaff({...item})
+        setStaff({ ...item })
     }
     const hanldeEditClose = () => { SetEditShow(false) }
     //FOr Add New Data Model
@@ -33,13 +38,13 @@ const Staff = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const [staff, setStaff]= useState({
-        fullname: '', 
+    const [staff, setStaff] = useState({
+        fullname: '',
         phone: '',
-        gender:false,
-        urlImage:'',
-        email:'',
-        password:''
+        gender: false,
+        urlImage: '',
+        email: '',
+        password: ''
     })
 
     console.log(staff)
@@ -47,8 +52,8 @@ const Staff = () => {
     //Id for update record and Delete
     const GetStaffData = () => {
         //here we will get all employee data
-        const url = 'http://localhost:3002/api/v1/cms/staff'
-        axios.get(url)
+        const url = 'http://206.189.146.194:3001/api/v1/cms/staff'
+        axios.get(url, header)
             .then(response => {
                 const result = response?.data;
                 const { status, staff, message } = result;
@@ -64,9 +69,9 @@ const Staff = () => {
             })
     }
     const handleSubmite = () => {
-        const url = 'http://localhost:3002/api/v1/cms/staff'
-        const Staff = { fullname, phone, gender, urlImage,email,password }
-        axios.post(url, Staff)
+        const url = 'http://206.189.146.194:3001/api/v1/cms/staff'
+        const Staff = { fullname, phone, gender, urlImage, email, password }
+        axios.post(url, Staff, header)
             .then(response => {
                 const result = response?.data;
                 const { status, staff, message } = result;
@@ -82,16 +87,16 @@ const Staff = () => {
             })
     }
 
-    const handleOnChange = (e) =>{
-        const{name, value} = e.target
-        setStaff({...staff, [name]: value})
+    const handleOnChange = (e) => {
+        const { name, value } = e.target
+        setStaff({ ...staff, [name]: value })
     }
 
-    const handleEdit = () =>{
-        const url = `http://localhost:3002/api/v1/cms/staff/${staff._id}`
-        const Staff = { fullname: staff.fullname, phone: staff.phone, gender: staff.gender, status: staff.status, urlImage: staff.urlImage}
+    const handleEdit = () => {
+        const url = `http://206.189.146.194:3001/api/v1/cms/staff/${staff._id}`
+        const Staff = { fullname: staff.fullname, phone: staff.phone, gender: staff.gender, status: staff.status, urlImage: staff.urlImage }
         console.log('edit', Staff)
-        axios.put(url, Staff)
+        axios.put(url, Staff, header)
             .then(response => {
                 const result = response?.data;
                 const { status, staff, message } = result;
@@ -115,7 +120,7 @@ const Staff = () => {
         <div>
             <div className='row'>
                 <div className='mt-5 mb-4'>
-                    <button className="btn text-white" style={{background: mainColor}} onClick={() => { handlePostShow() }}>
+                    <button className="btn text-white" style={{ background: mainColor }} onClick={() => { handlePostShow() }}>
                         Add New Staff
                     </button>
                 </div>
@@ -136,10 +141,10 @@ const Staff = () => {
                                 <tr key={item._id}>
                                     <td>{item.fullname}</td>
                                     <td>{item.phone}</td>
-                                    <td>{item.gender?'Female':'Male'}</td>
+                                    <td>{item.gender ? 'Female' : 'Male'}</td>
                                     <td className="d-flex justify-content-center" style={{ minWidth: '100px' }}>
-                                        <button className="btn text-white me-3" style={{width: '60px', background: mainColor}} onClick={() => handleViewShow(item) }>View</button>
-                                        <button className="btn text-white" style={{width: '60px',background: mainColor}} onClick={()=> handleEditShow(item)}>Edit</button>
+                                        <button className="btn text-white me-3" style={{ width: '60px', background: mainColor }} onClick={() => handleViewShow(item)}>View</button>
+                                        <button className="btn text-white" style={{ width: '60px', background: mainColor }} onClick={() => handleEditShow(item)}>Edit</button>
                                     </td>
                                 </tr>
                             )}
@@ -170,11 +175,11 @@ const Staff = () => {
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Gender:</label>
-                                <input type="text" className='form-control' value={staff.gender?'Female':'Male'} readOnly />
+                                <input type="text" className='form-control' value={staff.gender ? 'Female' : 'Male'} readOnly />
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Status:</label>
-                                <input type="text" className='form-control' value={staff.status?'Doing':'Done'} readOnly />
+                                <input type="text" className='form-control' value={staff.status ? 'Doing' : 'Done'} readOnly />
                             </div>
                         </div>
                     </Modal.Body>
@@ -241,15 +246,15 @@ const Staff = () => {
                         <div>
                             <div className='form-group'>
                                 <label>Fullname</label>
-                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e) } name='fullname' placeholder="Please enter fullname" value={staff.fullname}/>
+                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e)} name='fullname' placeholder="Please enter fullname" value={staff.fullname} />
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Phone</label>
-                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e) } name='phone' placeholder="Please enter phone" value={staff.phone} />
+                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e)} name='phone' placeholder="Please enter phone" value={staff.phone} />
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Gender</label>
-                                <select value={staff.gender} onChange={(e) => handleOnChange(e) } name='gender' className="form-select">
+                                <select value={staff.gender} onChange={(e) => handleOnChange(e)} name='gender' className="form-select">
                                     <option value='false'>Female</option>
                                     <option value='true'>Male</option>
                                 </select>
@@ -257,7 +262,7 @@ const Staff = () => {
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Status</label>
-                                <select value={staff.status} onChange={(e) => handleOnChange(e) } name='status' className="form-select">
+                                <select value={staff.status} onChange={(e) => handleOnChange(e)} name='status' className="form-select">
                                     <option value='false'>Done</option>
                                     <option value='true'>Doing</option>
                                 </select>
@@ -265,7 +270,7 @@ const Staff = () => {
                             </div>
                             <div className='form-group mt-3'>
                                 <label>UrlImane</label>
-                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e) } name='urlImage' placeholder="Please enter urlImage" value={staff.urlImage}/>
+                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e)} name='urlImage' placeholder="Please enter urlImage" value={staff.urlImage} />
                             </div>
                             <Button type='submit' className='btn btn-warning mt-4' onClick={handleEdit}>Edit Staff</Button>
                         </div>

@@ -6,12 +6,18 @@ import { faSearch, faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import logo from '../../assets/img/logo.png';
+import { Navigate, useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/esm/Container';
 Header.propTypes = {
 
 };
 
 function Header(props) {
+    const navigate = useNavigate();
+    const handleOnclick = () => {
+        localStorage.removeItem("token");
+        return navigate("/login");
+    }
     return (
         <Container fluid style={{ paddingRight: '0px', paddingLeft: '0px', marginBottom: '0px', boxShadow: '3px 4px 10px rgba(0,0,0,0.13)' }}>
             <nav className="navbar navbar-expand-lg navbar-light px-5">
@@ -48,9 +54,10 @@ function Header(props) {
                                 </a>
                             </li>
                             <li className="nav-item me-4">
-                                <a className="nav-link" href="#">
+                                <a className="nav-link" href="#" style={{ display: 'inline-block' }}>
                                     <FontAwesomeIcon icon={faUser} />
                                 </a>
+                                {localStorage.getItem("token") && <button onClick={handleOnclick} style={{ padding: '0', border: 'None', background: '0' }}>Log out</button>}
                             </li>
                         </ul>
                     </div>

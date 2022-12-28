@@ -82,7 +82,7 @@ function IndexBill(props) {
         }
     }
     return (
-        <div>
+        <div >
             <SearchForm STT={stt} ID_Delivery={deliver} Status={status} Delivery={delivery} HandleChange={handleChange} />
             {/* <Route path="/add" component={SearchForm} exac /> */}
             <ListBill Bills={bills} STT={stt} HandleUpdateClick={handleUpdateSTT} />

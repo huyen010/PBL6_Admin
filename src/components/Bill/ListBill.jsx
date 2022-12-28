@@ -43,20 +43,20 @@ function ListBill(props) {
     return (
         <div className="App">
             <div className="button_update">
-                <button onClick={handleButtonUpdate}>Cập nhật trạng thái</button>
+                <button onClick={handleButtonUpdate}>Update status</button>
             </div>
             <Table style={{ border: "solid 1px black" }}>
                 <thead>
                     <tr>
-                        <th>STT</th>
-                        <th>Mã đơn</th>
-                        <th>Ngày đặt</th>
-                        <th>Trạng thái</th>
-                        <th>Địa chỉ</th>
+                        <th>Index</th>
+                        <th>ID bill</th>
+                        <th>Date create</th>
+                        <th>Status</th>
+                        <th>Address</th>
                         {/* <th>Hình ảnh</th> */}
-                        <th>Đơn vị vận chuyển</th>
-                        <th>Tổng tiền</th>
-                        <th>Chi tiết</th>
+                        <th>Delivery</th>
+                        <th>Total price</th>
+                        <th>Detail</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,7 +77,7 @@ function ListBill(props) {
                                         val.id_bill.id_info.address.id_province.name}
                                 </td>
                                 <td>{val.id_bill.delivery.name}</td>
-                                <td>{val.id_bill.totalPrice}</td>
+                                <td>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(val.id_bill.totalPrice)}</td>
                                 <td>
                                     <Link to={`/bill/detail/${val._id}`} exact="true">
                                         Chi tiết{" "}

@@ -34,10 +34,10 @@ function SearchForm(props) {
 
     }
     return (
-        <div style={{ display: "flex", marginTop: "30px", marginLeft: "-45px" }} >
+        <div style={{ display: "flex", marginTop: "15px", marginLeft: "-45px" }} >
             <Form.Select aria-label="Default select example" style={{
                 width: "200px", border: "1px solid #8975ff",
-                height: "60px", marginRight: "10px"
+                height: "40px", marginRight: "10px"
             }} onChange={(event) => { handleChange(event.target.value, id_deliver) }} value={stt}>
                 {listStatus.map((val, key) => {
                     return <option key={key} value={val._id}>{val.name}</option>
@@ -45,7 +45,7 @@ function SearchForm(props) {
             </Form.Select >
             <Form.Select aria-label="Default select example" style={{
                 width: "200px", border: "1px solid #8975ff",
-                height: "60px", marginRight: "10px"
+                height: "40px", marginRight: "10px"
             }} onChange={(event) => { handleChange(stt, event.target.value) }} value={id_deliver}>
                 {listDelivery.map((val, key) => {
                     return <option key={key} value={val._id}>{val.name}</option>

@@ -3,19 +3,24 @@ import { Button, Modal, ModalTitle } from 'react-bootstrap'
 import axios from 'axios'
 
 const Delivery = () => {
+    const header = {
+        headers: {
+            token: localStorage.getItem("token"),
+        },
+    };
     const mainColor = 'linear-gradient(180deg, #7D89FF 0%, #AB40FF 66.67%)'
     const [Data, setData] = useState([]);
     const [ViewShow, SetViewShow] = useState(false)
-    const handleViewShow = (item) => { 
-        SetViewShow(true) 
-        setDelivery({...item})
+    const handleViewShow = (item) => {
+        SetViewShow(true)
+        setDelivery({ ...item })
     }
     const hanldeViewClose = () => { SetViewShow(false) }
     //FOr Edit Model
     const [ViewEdit, SetEditShow] = useState(false)
-    const handleEditShow = (item) => { 
+    const handleEditShow = (item) => {
         SetEditShow(true)
-        setDelivery({...item})
+        setDelivery({ ...item })
     }
     const hanldeEditClose = () => { SetEditShow(false) }
     //FOr Add New Data Model
@@ -31,8 +36,8 @@ const Delivery = () => {
     const [status, setStatus] = useState(false)
     const [note, setNote] = useState('')
 
-    const [delivery, setDelivery ]= useState({
-        name: '', 
+    const [delivery, setDelivery] = useState({
+        name: '',
         price: '',
         status: false,
         note: ''
@@ -43,7 +48,7 @@ const Delivery = () => {
     //Id for update record and Delete
     const GetEmployeeData = () => {
         //here we will get all employee data
-        const url = 'http://localhost:3002/api/v1/cms/deliveries/all'
+        const url = 'http://206.189.146.194:3003/api/v1/cms/deliveries/all'
         axios.get(url)
             .then(response => {
                 const result = response?.data;
@@ -60,7 +65,7 @@ const Delivery = () => {
             })
     }
     const handleSubmite = () => {
-        const url = 'http://localhost:3002/api/v1/cms/deliveries'
+        const url = 'http://206.189.146.194:3003/api/v1/cms/deliveries'
         const Delivery = { name, price, status, note }
         axios.post(url, Delivery)
             .then(response => {
@@ -78,16 +83,16 @@ const Delivery = () => {
             })
     }
 
-    const handleOnChange = (e) =>{
-        const{name, value} = e.target
-        setDelivery({...delivery, [name]: value})
+    const handleOnChange = (e) => {
+        const { name, value } = e.target
+        setDelivery({ ...delivery, [name]: value })
     }
 
-    const handleEdit = () =>{
-        const url = `http://localhost:3002/api/v1/cms/deliveries/${delivery._id}`
-        const Delivery = { name: delivery.name, price: delivery.price, status: delivery.status, note: delivery.note}
+    const handleEdit = () => {
+        const url = `http://206.189.146.194:3003/api/v1/cms/deliveries/${delivery._id}`
+        const Delivery = { name: delivery.name, price: delivery.price, status: delivery.status, note: delivery.note }
         console.log('edit', Delivery)
-        axios.put(url, Delivery)
+        axios.put(url, Delivery, header)
             .then(response => {
                 const result = response?.data;
                 const { status, delivery, message } = result;
@@ -111,7 +116,7 @@ const Delivery = () => {
         <div>
             <div className='row'>
                 <div className='mt-5 mb-4'>
-                    <button className="btn text-white" style={{background: mainColor}} onClick={() => { handlePostShow() }}>
+                    <button className="btn text-white" style={{ background: mainColor }} onClick={() => { handlePostShow() }}>
                         Add New Delivery
                     </button>
                 </div>
@@ -133,11 +138,11 @@ const Delivery = () => {
                                 <tr key={item._id}>
                                     <td>{item.name}</td>
                                     <td>{item.price}</td>
-                                    <td>{item.status?'Unuse':'Use'}</td>
+                                    <td>{item.status ? 'Unuse' : 'Use'}</td>
                                     <td>{item.note}</td>
                                     <td className="d-flex justify-content-center" style={{ minWidth: '100px' }}>
-                                        <button className="btn text-white me-3" style={{width: '60px', background: mainColor}} onClick={() => handleViewShow(item) }>View</button>
-                                        <button className="btn text-white" style={{width: '60px',background: mainColor}} onClick={()=> handleEditShow(item)}>Edit</button>
+                                        <button className="btn text-white me-3" style={{ width: '60px', background: mainColor }} onClick={() => handleViewShow(item)}>View</button>
+                                        <button className="btn text-white" style={{ width: '60px', background: mainColor }} onClick={() => handleEditShow(item)}>Edit</button>
                                     </td>
                                 </tr>
                             )}
@@ -168,7 +173,7 @@ const Delivery = () => {
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Status:</label>
-                                <input type="text" className='form-control' value={delivery.status?"Unuse":"Use"} readOnly />
+                                <input type="text" className='form-control' value={delivery.status ? "Unuse" : "Use"} readOnly />
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Note:</label>
@@ -233,23 +238,23 @@ const Delivery = () => {
                         <div>
                             <div className='form-group'>
                                 <label>Name</label>
-                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e) } name='name' placeholder="Please enter Name" value={delivery.name}/>
+                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e)} name='name' placeholder="Please enter Name" value={delivery.name} />
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Price</label>
-                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e) } name='price' placeholder="Please enter Price" value={delivery.price} />
+                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e)} name='price' placeholder="Please enter Price" value={delivery.price} />
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Status</label>
                                 {/* <input type="text" className='form-control' onChange={(e) => handleOnChange(e) } name='status' placeholder="Please enter Status" value={delivery.status}/> */}
-                                <select value={delivery.status} onChange={(e) => handleOnChange(e) } name='status' className="form-select">
+                                <select value={delivery.status} onChange={(e) => handleOnChange(e)} name='status' className="form-select">
                                     <option value='false'>Use</option>
                                     <option value='true'>Unuse</option>
                                 </select>
                             </div>
                             <div className='form-group mt-3'>
                                 <label>Note</label>
-                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e) } name='note' placeholder="Please enter Note" value={delivery.note}/>
+                                <input type="text" className='form-control' onChange={(e) => handleOnChange(e)} name='note' placeholder="Please enter Note" value={delivery.note} />
                             </div>
                             <Button type='submit' className='btn btn-warning mt-4' onClick={handleEdit}>Edit Employee</Button>
                         </div>

@@ -6,6 +6,7 @@ import { Route, Link, NavLink, useParams, useNavigate } from 'react-router-dom'
 import productAPI from '../../api/Product';
 import cateAPI from '../../api/Category';
 import Paginate from '../Pagination/Paginate';
+import staffAPI from '../../api/Staff';
 Index.propTypes = {
 
 };

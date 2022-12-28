@@ -16,14 +16,14 @@ const containerUserImage = {
 }
 
 const imageCommentStyle = {
-  height: '50px', 
+  height: '50px',
   width: '50px',
   marginRight: '5px'
 }
 
 const Comment = (props) => {
 
-  const {content, id_account,  star, urlImage} = props.comment
+  const { content, id_account, star, urlImage } = props.comment
 
   return (
     <div className='border-dark border-bottom m-3'>

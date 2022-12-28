@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal, ModalTitle } from 'react-bootstrap'
 import axios from 'axios'
-
+const header = {
+    headers: {
+        token: localStorage.getItem("token"),
+    },
+};
 const Categogy = () => {
     const mainColor = 'linear-gradient(180deg, #7D89FF 0%, #AB40FF 66.67%)'
     const [Data, setData] = useState([]);
@@ -38,8 +42,8 @@ const Categogy = () => {
     //Id for update record and Delete
     const GetCategoryData = () => {
         //here we will get all employee data
-        const url = 'http://localhost:3002/api/v1/cms/categories/all'
-        axios.get(url)
+        const url = 'http://206.189.146.194:3002/api/v1/cms/categories/all'
+        axios.get(url, header)
             .then(response => {
                 const result = response?.data;
                 setData([...result]);
@@ -49,11 +53,11 @@ const Categogy = () => {
             })
     }
     const handleSubmite = () => {
-        const url = 'http://localhost:3002/api/v1/cms/categories/insert'
+        const url = 'http://206.189.146.194:3002/api/v1/cms/categories/insert'
         const Category = { name }
 
         // console.log("heee"+name);
-        axios.post(url, Category)
+        axios.post(url, Category, header)
             .then(response => {
                 const result = response?.data;
                 // const {message , category, status } = result;
@@ -77,10 +81,10 @@ const Categogy = () => {
     }
 
     const handleEdit = () => {
-        const url = `http://localhost:3002/api/v1/cms/categories/update/${category.slug}`
+        const url = `http://206.189.146.194:3002/api/v1/cms/categories/update/${category.slug}`
         const Category = { name: category.name }
         console.log('edit', Category)
-        axios.put(url, Category)
+        axios.put(url, Category, header)
             .then(response => {
                 const result = response?.data;
                 // const {message , category, status } = result;
@@ -100,8 +104,8 @@ const Categogy = () => {
 
     //handle Delete Function 
     const handleDelete = (id) => {
-        const url = `http://localhost:3002/api/v1/cms/categories/delete/${id}`
-        axios.delete(url)
+        const url = `http://206.189.146.194:3002/api/v1/cms/categories/delete/${id}`
+        axios.delete(url, header)
             .then(response => {
                 const { message } = response.data;
                 console.log(message);

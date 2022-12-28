@@ -134,7 +134,7 @@ function BillDetail(props) {
         }
         if (answer) {
             await billAPI.canCelBill(id, data)
-            window.location.reload();
+            window.location.reload(true);
         }
     }
     return (
@@ -175,7 +175,12 @@ function BillDetail(props) {
                     <label htmlFor="">Phương thức thanh toán: {bill.id_bill.payment_method.name} </label>
                     <label htmlFor="">Đơn vị vận chuyển: {bill.id_bill.delivery.name} </label>
                     <label htmlFor="">Ngày đặt: {formatDate(bill.id_bill.createAt)} </label>
-                    <label htmlFor="">Giá sản phẩm: {bill.id_bill.productPrice + " Phí ship: " + bill.id_bill.shipPrice + " Tổng tiền: " + bill.id_bill.totalPrice} </label>
+                    <label htmlFor="">Giá sản phẩm: {new Intl.NumberFormat('vi-VN',
+                        { style: 'currency', currency: 'VND' }).format(bill.id_bill.productPrice)
+                        + " Phí ship: " + new Intl.NumberFormat('vi-VN',
+                            { style: 'currency', currency: 'VND' }).format(bill.id_bill.shipPrice) +
+                        " Tổng tiền: " + new Intl.NumberFormat('vi-VN',
+                            { style: 'currency', currency: 'VND' }).format(bill.id_bill.totalPrice)} </label>
 
                 </div>
 

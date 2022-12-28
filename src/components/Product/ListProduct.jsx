@@ -24,17 +24,17 @@ function ListProduct(props) {
 
     return (
         <div className='App'>
-            <Link className="btn btn-primary" style={{ backgroundColor: "#8975ff", marginBottom: "20px" }} to="/product/add" exact="true">Thêm mới</Link>
+            <Link className="btn btn-primary" style={{ backgroundColor: "#8975ff", marginBottom: "20px" }} to="/product/add" exact="true">Add new</Link>
             <Table style={{ border: "solid 1px black" }}>
                 <thead>
                     <tr>
-                        <th>STT</th>
-                        <th>Tên sản phẩm</th>
-                        <th>Trạng thái</th>
-                        <th>Đã bán</th>
-                        <th>Giá</th>
-                        <th>Chi tiết</th>
-                        <th>Thao tác</th>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Sold</th>
+                        <th>Price</th>
+                        <th>Detail</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,16 +53,16 @@ function ListProduct(props) {
                                 alt="" style={{ width: "150px", height: "100px" }}
                             />
                         </td> */}
-                                <td>{val.price}</td>
+                                <td>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(val.price)}</td>
                                 <td><Link to="/category/add" exact="true">Xem </Link></td>
                                 <td>
                                     <Button variant="success" onClick={() => {
                                         navigate(`/product/update/${val._id}`)
                                     }} style={{ backgroundColor: "#8975ff" }} size="sm">
-                                        Sửa
+                                        Edit
                                     </Button>{' '}
                                     <Button style={{ backgroundColor: "#8975ff" }} onClick={() => handleButtonDelete(key, val._id)} variant="success" size="sm">
-                                        Xóa
+                                        Delete
                                     </Button>{' '}
                                 </td>
                             </tr>

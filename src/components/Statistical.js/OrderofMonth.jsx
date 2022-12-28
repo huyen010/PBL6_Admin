@@ -39,7 +39,7 @@ function OrderofMonth(props) {
                     <option value="12">Tháng 12</option>
 
                 </select>
-                <label style={{ marginLeft: "10px" }} htmlFor="">Tổng số đơn: {totalOrder}, Doanh thu: {revenue}</label>
+                <label style={{ marginLeft: "10px" }} htmlFor="">Tổng số đơn: {totalOrder}, Doanh thu: {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(revenue)}</label>
             </div>
 
             <div style={{

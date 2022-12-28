@@ -47,7 +47,7 @@ function SearchForm(props) {
 
                 <Form.Control style={{ width: "230px", border: "1px solid #8975ff" }}
                     type="search"
-                    placeholder="Nhập tên sản phẩm ..."
+                    placeholder="Name product ..."
                     className="me-2"
                     aria-label="Search"
                     onChange={(event) => { setSearch(event.target.value) }} value={search}
@@ -55,7 +55,7 @@ function SearchForm(props) {
                 <Button variant="outline-success" style={{
                     border: "2px solid #8975ff", backgroundColor: "#8975ff",
                     color: 'white'
-                }} onClick={handleButtonSearch}>Tìm kiếm</Button>
+                }} onClick={handleButtonSearch}>Search</Button>
             </Form>
         </div >
     );

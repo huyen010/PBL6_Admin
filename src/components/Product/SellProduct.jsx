@@ -69,6 +69,7 @@ function SellProduct(props) {
         for (let i = 0; i < photo.length; i++) {
             formData.append("image", photo[i]);
         }
+        console.log(...formData)
         setIsLoadingUpload(true)
         // const res = await fetch('/api/v1/cms/products/upload-image', { method: "POST", body: formData })
         const res = await UploadAPI.uploadFile(formData);

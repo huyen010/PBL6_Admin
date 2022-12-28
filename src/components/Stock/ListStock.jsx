@@ -27,19 +27,19 @@ function ListStock(props) {
     const Stocks = props.Stocks;
     return (
         <div className='App'>
-            <Link className="btn btn-primary" style={{ backgroundColor: "#8975ff", marginBottom: "20px" }} to="/product/add" exact="true">Thêm mới</Link>
+            <Link className="btn btn-primary" style={{ backgroundColor: "#8975ff", marginBottom: "20px" }} to="/stock/add" exact="true">Add new</Link>
             <Table style={{ border: "solid 1px black" }}>
                 <thead>
                     <tr>
-                        <th>STT</th>
-                        <th>Nhà cung cấp</th>
-                        <th>Ngày nhập</th>
-                        <th>Sản phẩm</th>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Receive date</th>
+                        <th>Product</th>
                         {/* <th>Hình ảnh</th> */}
-                        <th>Tổng tiền</th>
-                        <th>Tình trạng</th>
-                        <th>Chi tiết</th>
-                        <th>Thao tác</th>
+                        <th>Total price</th>
+                        <th>Status</th>
+                        <th>Detail</th>
+                        {/* <th>Thao tác</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -53,7 +53,7 @@ function ListStock(props) {
                                 <td>{val.totalPrice}</td>
                                 <td>{checkStatus(val.status)}</td>
                                 <td><Link to="/category/add" exact="true">Xem </Link></td>
-                                <td>
+                                {/* <td>
                                     <Button variant="success" onClick={() => {
                                         Navigate(`/product/update/${val._id}`)
                                     }} style={{ backgroundColor: "#8975ff" }} size="sm">
@@ -62,7 +62,7 @@ function ListStock(props) {
                                     <Button style={{ backgroundColor: "#8975ff" }} variant="success" size="sm">
                                         Xóa
                                     </Button>{' '}
-                                </td>
+                                </td> */}
                             </tr>
                         )
                     })}

@@ -11,10 +11,12 @@ AddProduct.propTypes = {
 };
 
 function AddProduct(props) {
+    const navigate = useNavigate();
     const [Categories, setCates] = useState([])
     const [name, setName] = useState("")
     const [cate, setCate] = useState("");
     useEffect(() => {
+        // navigate("/products/all/1");
         const fetchCates = async () => {
             const listCate = await cateAPI.getALL();
             setCates(listCate);
@@ -22,7 +24,6 @@ function AddProduct(props) {
         };
         fetchCates();
     }, []);
-    const navigate = useNavigate();
     const submit = async () => {
         const data = { name: name, id_cate: cate };
         var answer = window.confirm("Are you sure to insert product?");
@@ -37,7 +38,7 @@ function AddProduct(props) {
     return (
         <Form style={{ marginTop: "30px" }}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Tên Sản Phẩm</Form.Label>
+                <Form.Label>Name</Form.Label>
                 <Form.Control onChange={(event) => {
                     setName(event.target.value)
                 }} value={name} type="text" placeholder="Tên sản phẩm ..." />
@@ -45,7 +46,7 @@ function AddProduct(props) {
                 </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Danh mục</Form.Label>
+                <Form.Label>Category</Form.Label>
                 <Form.Select onChange={(event) => {
                     setCate(event.target.value)
                 }} value={cate} >

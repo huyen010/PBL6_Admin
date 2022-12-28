@@ -30,7 +30,7 @@ function Navbar(props) {
                             </a>
                         </li>
                         <li className="nav-item w-100">
-                            <Link className="nav-link text-start text-white" to="/Category">
+                            <Link className="nav-link text-start text-white" to="/admin/category">
                                 <FontAwesomeIcon className='me-2' icon={faList} />
                                 Catergory
                             </Link>
@@ -42,7 +42,7 @@ function Navbar(props) {
                             </a>
                         </li>
                         <li className="nav-item w-100">
-                            <Link className="nav-link text-start text-white" to='/Promotion'>
+                            <Link className="nav-link text-start text-white" to='/admin/promotion'>
                                 <FontAwesomeIcon className='me-2' icon={faArrowDown} />
                                 Promotion
                             </Link>
@@ -53,7 +53,7 @@ function Navbar(props) {
                     <a className="nav-link text-start text-white text-uppercase" data-bs-toggle="" href="#shipment" role="button" aria-expanded="true" aria-controls="shipment">Shipment</a>
                     <ul className="nav flex-column " id='shipment'>
                         <li className="nav-item w-100">
-                            <Link className="nav-link text-start text-white" to="/Delivery">
+                            <Link className="nav-link text-start text-white" to="/admin/delivery">
                                 <FontAwesomeIcon className='me-2' icon={faLocationDot} />
                                 Delivery
                             </Link>
@@ -70,7 +70,7 @@ function Navbar(props) {
                     <a className="nav-link text-start text-white text-uppercase" data-bs-toggle="" href="#statistic" role="button" aria-expanded="true" aria-controls="statistic">Statistic</a>
                     <ul className="nav flex-column " id='statistic'>
                         <li className="nav-item w-100">
-                            <a className="nav-link text-start text-white" href="/statistical">
+                            <a className="nav-link text-start text-white" href="/admin/statistical">
                                 <FontAwesomeIcon className='me-2' icon={faChartColumn} />
                                 Statistic
                             </a>
@@ -89,19 +89,19 @@ function Navbar(props) {
                             </a>
                         </li>
                         <li className="nav-item w-100">
-                            <Link className="nav-link text-start text-white" to='/ManageComment'>
+                            <Link className="nav-link text-start text-white" to='/manageComment'>
                                 <FontAwesomeIcon className='me-2' icon={faBookOpen} />
                                 Comment
                             </Link>
                         </li>
                         <li className="nav-item w-100">
-                            <Link className="nav-link text-start text-white" to='/BlackList'>
+                            <Link className="nav-link text-start text-white" to='/blackList'>
                                 <FontAwesomeIcon className='me-2' icon={faAddressBook} />
                                 Black List
                             </Link>
                         </li>
                         <li className="nav-item w-100">
-                            <Link className="nav-link text-start text-white" to='/Staff'>
+                            <Link className="nav-link text-start text-white" to='/admin/staff'>
                                 <FontAwesomeIcon className='me-2' icon={faUser} />
                                 Staff
                             </Link>

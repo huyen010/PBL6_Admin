@@ -3,7 +3,11 @@ import React, { useEffect, useState } from 'react'
 import Comments from './Comments'
 
 const ManageComment = () => {
-
+  const header = {
+    headers: {
+      token: localStorage.getItem("token"),
+    },
+  };
   const [categories, setCategories] = useState([])
   const [products, setProducts] = useState([])
   const [product, setProduct] = useState('')
@@ -18,7 +22,7 @@ const ManageComment = () => {
   useEffect(() => {
     const getCategoryData = async () => {
       try {
-        const response = await axios.get(categoriesURL)
+        const response = await axios.get(categoriesURL, header)
         setCategories([...response.data])
       } catch (error) {
 
@@ -30,14 +34,14 @@ const ManageComment = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const response = await axios.get(`${productURL}/${category}/all`)
+        const response = await axios.get(`${productURL}/${category}/all`, header)
         setProducts([...response.data.products])
         // console.log(response)
       } catch (error) {
         console.log(error)
       }
     }
-    if(category !== '') {
+    if (category !== '') {
       getProduct()
     }
   }, [category])
