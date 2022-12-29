@@ -27,7 +27,7 @@ function ListDiscount(props) {
       <Link
         className="btn btn-primary"
         style={{ backgroundColor: "#8975ff", marginBottom: "20px" }}
-        to="admin/discount/add"
+        to="/admin/discount/add"
         exact="true"
       >
         Add new

@@ -59,7 +59,7 @@ function AddDiscount(props) {
             setTimeout(() => {
                 console.log("Delayed for 1 second.");
             }, 3000)
-            navigate("admin/Promotion");
+            navigate("/admin/Promotion");
         }
         else {
             return;
